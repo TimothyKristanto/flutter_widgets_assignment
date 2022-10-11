@@ -189,16 +189,22 @@ class _AnimeDetailPageState extends State<AnimeDetailPage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context) => BookForm()));
-        },
-        backgroundColor: Colors.black87,
-        label: Text(
-          "Book Now",
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold
+      floatingActionButton: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(90),
+          gradient: LinearGradient(colors: [Color.fromARGB(255, 0, 129, 235), Colors.cyan]),
+        ),
+        child: FloatingActionButton.extended(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => BookForm()));
+          },
+          backgroundColor: Colors.transparent,
+          label: Text(
+            "Book Now",
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold
+            ),
           ),
         ),
       ),
